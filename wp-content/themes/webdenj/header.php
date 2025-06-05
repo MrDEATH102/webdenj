@@ -8,3 +8,23 @@
     <?php wp_head(); ?>
 </head>
 <body>
+    <!-- start header section  -->
+
+    <header class='main_header'>
+        <div class="contaner">
+            <div class="row">
+                <!-- Header logo component  -->
+                 <div class="col-lg-2 col-12">
+                    logo
+                 </div>
+                 <!-- Header menu component  -->
+                  <div class="col-lg-6 col-12">
+                    menu
+                  </div>
+                  <!-- Header CTA component  -->
+                   <div class="col-lg-4 col-12">
+                    CTA
+                   </div>
+            </div>
+        </div>
+    </header>
