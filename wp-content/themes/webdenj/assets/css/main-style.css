@@ -1,3 +1,9 @@
-body{
-    background-color: skyblue;
+@font-face {
+    font-family: 'yekan';
+    src: url('../fonts/iranyekanwebregular.eot'),
+         url('../fonts/iranyekanwebregular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/iranyekanwebregular.ttf') format('truetype'),
+         url('../fonts/iranyekanwebregular.woff') format('woff'),
+         url('../fonts/iranyekanwebregular.woff2') format('woff2');
+    font-weight: normal;
 }
