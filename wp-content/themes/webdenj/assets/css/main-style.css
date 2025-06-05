@@ -1,9 +1,26 @@
+:root {
+    --primary-color : #7454fc;
+}
 @font-face {
     font-family: 'yekan';
     src: url('../fonts/iranyekanwebregular.eot'),
-         url('../fonts/iranyekanwebregular.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/iranyekanwebregular.ttf') format('truetype'),
-         url('../fonts/iranyekanwebregular.woff') format('woff'),
-         url('../fonts/iranyekanwebregular.woff2') format('woff2');
+        url('../fonts/iranyekanwebregular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/iranyekanwebregular.ttf') format('truetype'),
+        url('../fonts/iranyekanwebregular.woff') format('woff'),
+        url('../fonts/iranyekanwebregular.woff2') format('woff2');
     font-weight: normal;
+}
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header styles  */
+.main_header{
+    border-top: 3px solid var(--primary-color);
+    padding: 1.2rem 0;
 }
