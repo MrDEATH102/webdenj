@@ -15,7 +15,7 @@
             <div class="row">
                 <!-- Header logo component  -->
                  <div class="col-lg-2 col-12">
-                    logo
+                    <?php get_template_part('templates/header/logo', 'component' ); ?>
                  </div>
                  <!-- Header menu component  -->
                   <div class="col-lg-6 col-12">
