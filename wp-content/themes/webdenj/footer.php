@@ -1,7 +1,6 @@
 <!-- start widgets items -->
 <!-- search widgets  -->
-<div class="search__widget">
-</div>
+    <?php get_template_part('widgets/search', 'widget') ?>
 <!-- End widget Items  -->
 <!-- start overlay section -->
  <div onclick="overlay_section_hide()" class="overlay__section"></div>
