@@ -13,7 +13,7 @@
     <!-- start header section  -->
 
     <header class='main_header'>
-        <div class="contaner">
+        <div class="container">
             <div class="row">
                 <!-- Header logo component  -->
                 <div class="col-lg-2 col-12">
@@ -25,7 +25,7 @@
                 </div>
                 <!-- Header CTA component  -->
                 <div class="col-lg-3 col-12">
-                    CTA
+                    <?php get_template_part('templates/header/cta', 'component') ?>
                 </div>
             </div>
         </div>

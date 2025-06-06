@@ -173,7 +173,67 @@ body {
     border-radius: 5px;
     transition: var(--transition);
 }
+
 .main_header .menu__header .custom-btn a:hover {
     background-color: #45368c;
     color: #fff;
+}
+
+/* Header CTA styles  */
+.main_header .cta__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main_header .cta__header .cta__header__right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.main_header .cta__header .cta__header__right .cta__header__item {
+    display: flex;
+    width: 45px;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: var(--transition);
+    margin-left: 3px;
+}
+
+.main_header .cta__header .cta__header__right .cta__header__item:hover {
+    background: var(--link-hover-color);
+}
+
+.main_header .cta__header .cta__header__right .cta__header__item.cta__header__right--search:hover svg {
+    fill: #fff;
+}
+
+.main_header .cta__header .cta__header__right .cta__header__item.cta__header__right--mode:hover path {
+    stroke: #fff;
+}
+
+.main_header .cta__header .cta__header__right .cta__header__item.cta__header__right--cart:hover path {
+    stroke: #fff;
+}
+
+.main_header .cta__header .cta__header__left .cta__header__left--login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 15px;
+    transition: var(--transition);
+}
+
+.main_header .cta__header .cta__header__left .cta__header__left--login .fa-light {
+    margin-left: 5px;
+}
+
+.main_header .cta__header .cta__header__left .cta__header__left--login:hover {
+    background: #45368c;
 }
