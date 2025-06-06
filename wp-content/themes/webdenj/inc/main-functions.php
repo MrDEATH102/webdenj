@@ -22,4 +22,6 @@ if( !function_exists('webdenj_nav_menus') ){
             )
             );
     }
+
+    add_action('after_setup_theme', 'webdenj_nav_menus');
 }
