@@ -20,11 +20,11 @@
                     <?php get_template_part('templates/header/logo', 'component'); ?>
                 </div>
                 <!-- Header menu component  -->
-                <div class="col-lg-6 col-12">
+                <div class="col-lg-7 col-12">
                     <?php get_template_part('templates/header/menu', 'component'); ?>
                 </div>
                 <!-- Header CTA component  -->
-                <div class="col-lg-4 col-12">
+                <div class="col-lg-3 col-12">
                     CTA
                 </div>
             </div>

@@ -58,6 +58,11 @@ body {
 }
 
 /* header menu styles  */
+.main_header .menu__header {
+    display: flex;
+    align-items: center;
+}
+
 .main_header .menu__header .menu {
     display: flex;
 }
@@ -158,4 +163,17 @@ body {
 .main_header .menu__header .menu .sub-menu .menu-item.menu-item-has-children:hover::after {
     left: -8px;
     color: var(--link-hover-color);
+}
+
+/* Header custon btn styles  */
+.main_header .menu__header .custom-btn a {
+    color: #fdfdfd;
+    background: var(--link-hover-color);
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: var(--transition);
+}
+.main_header .menu__header .custom-btn a:hover {
+    background-color: #45368c;
+    color: #fff;
 }
