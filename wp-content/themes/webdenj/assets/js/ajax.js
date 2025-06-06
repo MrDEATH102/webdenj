@@ -11,7 +11,21 @@ jQuery(document).ready(function ($) {
         if (keyword.length > 3) {
 
             // Ajax request 
-
+            $.ajax({
+                method : 'POST',
+                url : '/wp-admin/admin-ajax.php',
+                data : {
+                    action : 'search_ajax_return',
+                    key : keyword
+                },
+                beforeSend : () => {
+                    $('.search__widget .fa-spinner').fadeIn(0);
+                },
+                complete : (response) => {
+                    $('.search__widget .fa-spinner').fadeOut(0);
+                    console.log(response);
+                }
+            });
         }
     })
 });

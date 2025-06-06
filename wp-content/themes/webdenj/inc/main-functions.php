@@ -27,3 +27,13 @@ if( !function_exists('webdenj_nav_menus') ){
 
     add_action('after_setup_theme', 'webdenj_nav_menus');
 }
+
+//Ajax search function
+function search_ajax_return(){
+    
+    $keyword = sanitize_text_field($_POST['key']);
+
+    wp_die();
+}
+add_action('wp_ajax_search_ajax_return','search_ajax_return');
+add_action('wp_ajax_nopriv_search_ajax_return','search_ajax_return');

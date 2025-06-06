@@ -325,3 +325,12 @@ input[type=search] {
 .search__widget .fa-xmark:hover {
     background: var(--bg-hover-color);
 }
+
+.search__widget .fa-spinner {
+    position: absolute;
+    left: -32px;
+    top: 55%;
+    z-index: 99999;
+    font-size: 23px;
+    display: none;
+}
