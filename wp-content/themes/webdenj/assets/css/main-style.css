@@ -1,6 +1,10 @@
 :root {
-    --primary-color : #7454fc;
+    --primary-color: #7454fc;
+    --text-color: #4b515a;
+    --link-hover-color: #7454fc;
+    --transition: all ease 400ms;
 }
+
 @font-face {
     font-family: 'yekan';
     src: url('../fonts/iranyekanwebregular.eot'),
@@ -18,12 +22,63 @@
     padding: 0;
     box-sizing: border-box;
 }
-.img-fluid{
+
+.img-fluid {
     width: 100%;
     height: auto;
 }
+
+li {
+    list-style-type: none;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'yekan';
+    font-size: 14px;
+}
+
 /* Header styles  */
-.main_header{
+.main_header {
     border-top: 3px solid var(--primary-color);
     padding: 1.4rem 0;
+}
+
+.main_header .row {
+    align-items: center;
+}
+
+/* Header logo styles */
+.main_header .logo__header .img-fluid {
+    display: block;
+}
+
+/* header menu styles  */
+.main_header .menu__header .menu {
+    display: flex;
+}
+
+.main_header .menu__header .menu .menu-item {
+    margin-left: 20px;
+}
+
+.main_header .menu__header .menu .menu-item a {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.main_header .menu__header .menu .menu-item a:hover,
+.main_header .menu__header .menu .current-menu-item a {
+    color: var(--link-hover-color);
+}
+.main_header .menu__header .menu .current-menu-item .sub-menu {
+    display: none;
+}
+.main_header .menu__header .menu .menu-item.menu-has-children::after{
+    content: ' ';
 }
