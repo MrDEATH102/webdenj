@@ -10,3 +10,16 @@ function webdenj_style_script(){
     wp_enqueue_script( 'main', get_template_directory_uri().'/assets/js/main.js', array('jquery'), '1.0.0', true );
 }
 add_action('wp_enqueue_scripts', 'webdenj_style_script');
+
+//Register Nav Menus
+if( !function_exists('webdenj_nav_menus') ){
+
+    function webdenj_nav_menus(){
+        register_nav_menus(
+            array(
+                'header_menu' => 'Header Menu',
+                'footer_menu' => 'Footer Menu'
+            )
+            );
+    }
+}
