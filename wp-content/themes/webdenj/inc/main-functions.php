@@ -9,6 +9,7 @@ function webdenj_style_script(){
 
     //enqueue scripts
     wp_enqueue_script( 'main', get_template_directory_uri().'/assets/js/main.js', array('jquery'), '1.0.0', true );
+    wp_enqueue_script( 'ajax', get_template_directory_uri().'/assets/js/ajax.js', array('jquery'), '1.0.0', true );
 }
 add_action('wp_enqueue_scripts', 'webdenj_style_script');
 

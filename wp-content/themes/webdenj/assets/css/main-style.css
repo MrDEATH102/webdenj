@@ -2,6 +2,7 @@
     --primary-color: #7454fc;
     --text-color: #4b515a;
     --link-hover-color: #7454fc;
+    --bg-hover-color: #45368c;
     --transition: all ease 300ms;
 }
 
@@ -42,7 +43,8 @@ body {
     font-size: 14px;
 }
 
-input[type=text],input[type=search]{
+input[type=text],
+input[type=search] {
     font-family: 'yekan';
 }
 
@@ -269,7 +271,6 @@ input[type=text],input[type=search]{
     height: 300px;
     margin: auto;
     text-align: center;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -277,12 +278,14 @@ input[type=text],input[type=search]{
     color: #fff;
     display: none;
 }
-.search__widget .search__widget__title{
+
+.search__widget .search__widget__title {
     font-size: 1.4rem;
     font-weight: normal;
     margin-bottom: 15px;
 }
-.search__widget .search__widget__input{
+
+.search__widget .search__widget__input {
     width: 100%;
     background: #fff;
     border: 0;
@@ -291,10 +294,34 @@ input[type=text],input[type=search]{
     padding: 14px;
     font-size: 1rem;
     color: var(--text-color);
+    position: relative;
+    z-index: 3;
 }
-.search__widget .search__widget__input:focus{
+
+.search__widget .search__widget__input:focus {
     outline: 0;
 }
-.search__widget .search__widget__input::placeholder{
+
+.search__widget .search__widget__input::placeholder {
     color: #9c9c9c;
+}
+
+.search__widget .fa-xmark {
+    position: absolute;
+    right: 10px;
+    top: 114px;
+    width: 32px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 8px 8px 0 0;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.search__widget .fa-xmark:hover {
+    background: var(--bg-hover-color);
 }
