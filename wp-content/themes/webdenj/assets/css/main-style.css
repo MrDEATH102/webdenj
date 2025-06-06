@@ -225,6 +225,14 @@ input[type=search] {
     margin-left: 3px;
 }
 
+.main_header .cta__header .cta__header__right .cta__header__item.cta__header__right--mode.active {
+    background: var(--link-hover-color);
+}
+
+.main_header .cta__header .cta__header__right .cta__header__item.cta__header__right--mode.active path {
+    stroke: #ffffff;
+}
+
 .main_header .cta__header .cta__header__right .cta__header__item:hover {
     background: var(--link-hover-color);
 }
@@ -352,8 +360,9 @@ input[type=search] {
     margin-bottom: 10px;
     padding: 10px;
 }
+
 .search__widget .search__widget__result .product .img_box {
-    max-width: 70px;   
+    max-width: 70px;
 }
 
 .search__widget .search__widget__result .product .img_box .wp-post-image {
