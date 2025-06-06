@@ -41,7 +41,20 @@ body {
     font-family: 'yekan';
     font-size: 14px;
 }
-
+/* overlay styles  */
+.overlay__section{
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+}
+.overlay__section.active{
+    display: block;
+}
 /* Header styles  */
 .main_header {
     border-top: 3px solid var(--primary-color);
