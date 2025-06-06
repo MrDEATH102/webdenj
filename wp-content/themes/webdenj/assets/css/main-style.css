@@ -334,3 +334,83 @@ input[type=search] {
     font-size: 23px;
     display: none;
 }
+
+.search__widget .search__widget__result {
+    position: absolute;
+    top: 70%;
+    right: 0;
+    width: 100%;
+    max-height: 240px;
+    overflow: hidden;
+    overflow-y: auto;
+    padding-left: 5px;
+}
+
+.search__widget .search__widget__result .product {
+    background: #fff;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.search__widget .search__widget__result .product .img_box {
+    max-width: 70px;   
+}
+
+.search__widget .search__widget__result .product .img_box .wp-post-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.search__widget .search__widget__result .product .info_box {
+    margin-right: 10px;
+}
+
+.search__widget .search__widget__result .product .info_box .title {
+    color: #636363;
+    font-size: 0.85rem;
+}
+
+.search__widget .search__widget__result .product .info_box .price {
+    color: #333;
+    text-align: right;
+}
+
+.search__widget .search__widget__result .product .info_box .cta {
+    text-align: right;
+    display: block;
+}
+
+/* Scrollbar search widget styles */
+.search__widget .search__widget__result::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+}
+
+.search__widget .search__widget__result::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: #DFE9EB;
+}
+
+.search__widget .search__widget__result::-webkit-scrollbar-track:hover {
+    background-color: #B8C0C2;
+}
+
+.search__widget .search__widget__result::-webkit-scrollbar-track:active {
+    background-color: #B8C0C2;
+}
+
+.search__widget .search__widget__result::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #7454FC;
+}
+
+.search__widget .search__widget__result::-webkit-scrollbar-thumb:hover {
+    background-color: #543DB7;
+}
+
+.search__widget .search__widget__result::-webkit-scrollbar-thumb:active {
+    background-color: #433091;
+}

@@ -15,6 +15,8 @@ jQuery(document).ready(function ($) {
 
         //close form and overlay
         $('.search__widget').css({ 'display': 'none' });
+        $('.search__widget__result').html('');
+        $('#search__widget__input').val('');
         overlay_section_hide();
     })
 })
@@ -30,4 +32,6 @@ function overlay_section_hide() {
     jQuery('.overlay__section').removeClass('active');
     //close search box
     jQuery('.search__widget').css({ 'display': 'none' });
+    jQuery('.search__widget__result').html('');
+    jQuery('#search__widget__input').val('');
 }

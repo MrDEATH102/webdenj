@@ -12,20 +12,23 @@ jQuery(document).ready(function ($) {
 
             // Ajax request 
             $.ajax({
-                method : 'POST',
-                url : '/wp-admin/admin-ajax.php',
-                data : {
-                    action : 'search_ajax_return',
-                    key : keyword
+                method: 'POST',
+                url: '/wp-admin/admin-ajax.php',
+                data: {
+                    action: 'search_ajax_return',
+                    key: keyword
                 },
-                beforeSend : () => {
+                beforeSend: () => {
                     $('.search__widget .fa-spinner').fadeIn(0);
                 },
-                complete : (response) => {
+                complete: (response) => {
                     $('.search__widget .fa-spinner').fadeOut(0);
-                    console.log(response);
+                    $('.search__widget__result').html(response.responseText);
                 }
             });
+        }else {
+            // If keyword length is less than 3, clear the results
+            $('.search__widget__result').html('');
         }
     })
 });
