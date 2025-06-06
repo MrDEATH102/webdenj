@@ -4,6 +4,13 @@
     --link-hover-color: #7454fc;
     --bg-hover-color: #45368c;
     --transition: all ease 300ms;
+    --bg-submenu: #fff;
+}
+
+[data-mode=dark] {
+    --dark-bg-body: #141519;
+    --text-color: #fff;
+    --bg-submenu: #141519;
 }
 
 @font-face {
@@ -41,6 +48,7 @@ a:hover {
 body {
     font-family: 'yekan';
     font-size: 14px;
+    background: var(--dark-bg-body);
 }
 
 input[type=text],
@@ -108,7 +116,7 @@ input[type=search] {
 .main_header .menu__header .menu>.menu-item>.sub-menu {
     position: absolute;
     width: 200px;
-    background: #fff;
+    background: var(--bg-submenu);
     box-shadow: 0 0 30px -7px rgba(0, 0, 0, 0.25);
     padding: 20px;
     top: 100px;
@@ -144,6 +152,7 @@ input[type=search] {
     display: block;
     left: -16px;
     top: 7px;
+    color: var(--text-color);
 }
 
 .main_header .menu__header .menu>.menu-item.menu-item-has-children:hover::after {
@@ -166,7 +175,7 @@ input[type=search] {
     right: 170px;
     width: 200px;
     top: 0;
-    background: #fff;
+    background: var(--bg-submenu);
     box-shadow: 0 0 30px -7px rgba(0, 0, 0, 0.25);
     padding: 20px;
     border-radius: 7px;

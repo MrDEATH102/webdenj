@@ -9,9 +9,9 @@ jQuery(document).ready(function ($) {
         localStorage.setItem('theme-mode', localStorage.getItem('theme-mode'));
         $('body').attr('data-mode', localStorage.getItem('theme-mode'));
         if(localStorage.getItem('theme-mode')=='light'){
-            $('.cta__header__right--mode').addClass('active');
-        }else{
             $('.cta__header__right--mode').removeClass('active');
+        }else{
+            $('.cta__header__right--mode').addClass('active');
         }
     }
 
@@ -40,11 +40,11 @@ jQuery(document).ready(function ($) {
         if (themeMode == 'light') {
             $('body').attr('data-mode', 'dark');
             localStorage.setItem('theme-mode', 'dark');
-            $(this).removeClass('active');
+            $(this).addClass('active');
         } else {
             $('body').attr('data-mode', 'light');
             localStorage.setItem('theme-mode', 'light');
-            $(this).addClass('active');
+            $(this).removeClass('active');
         }
     })
 })
