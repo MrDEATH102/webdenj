@@ -14,7 +14,7 @@
                     stroke="#7454fc" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
             </svg>
         </a>
-        <a href="<?php bloginfo('url') ?>/cart" class="cta__header__right--cart cta__header__item">
+        <a href="<?php bloginfo('url'); ?>/cart" class="cta__header__right--cart cta__header__item">
             <svg width="20px" height="20px" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M9.17708 2.08333L5.40625 5.86458" stroke="#7454fc" stroke-width="1.5" stroke-miterlimit="10"
                     stroke-linecap="round" stroke-linejoin="round"></path>
@@ -33,20 +33,19 @@
         </a>
     </div>
     <div class="cta__header__left">
-        <?php
-        if (is_user_logged_in()): ?>
+        <?php if (is_user_logged_in()): ?>
             <a class="cta__header__left--login loggedin">
                 <?php
+                global $user;
                 $user = wp_get_current_user();
                 $user_id = $user->ID;
-                $dispay_name = $user->display_name;
                 $avatar = get_avatar_url($user_id, array('size' => '48'));
                 ?>
                 <img src="<?php echo $avatar; ?>" alt="<?php echo $display_name; ?>">
             </a>
             <?php echo get_template_part('widgets/minipanel', 'widget'); ?>
         <?php else: ?>
-            <a href="<?php bloginfo('url') ?>/my-account" class="cta__header__left--login">
+            <a href="<?php bloginfo('url'); ?>/my-account" class="cta__header__left--login">
                 <i class="fa-light fa-user-unlock"></i>
                 پنل کاربری
             </a>

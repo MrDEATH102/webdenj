@@ -1,16 +1,16 @@
 jQuery(document).ready(function ($) {
 
 
-    //Ajax request search popup
+    //Ajax request search box popup
     $('#search__widget__input').on('input', function () {
 
-        //define keyword
+        //Define keyword
         let keyword = $(this).val();
 
-        //check keyword length
+        //Check keyword length
         if (keyword.length > 3) {
 
-            // Ajax request 
+            //Ajax request
             $.ajax({
                 method: 'POST',
                 url: '/wp-admin/admin-ajax.php',
@@ -26,9 +26,11 @@ jQuery(document).ready(function ($) {
                     $('.search__widget__result').html(response.responseText);
                 }
             });
-        }else {
-            // If keyword length is less than 3, clear the results
+        } else {
             $('.search__widget__result').html('');
         }
-    })
+
+    });
+
+
 });
