@@ -432,3 +432,50 @@ input[type=search] {
 .search__widget .search__widget__result::-webkit-scrollbar-thumb:active {
     background-color: #433091;
 }
+
+/* CTA cart widget style  */
+.main_header .cta__header__right--cart{
+    position: relative;
+}
+
+.main_header .cta__header__right--cart .cart_count {
+    position: absolute;
+    right: -6px;
+    top: -5px;
+    color: #fff;
+    background: var(--primary-color);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.main_header .cta__header__right--cart:hover .cart_count {
+
+    background: #fff;
+    color: var(--primary-color);
+}
+/* CTA logged in btn style  */
+.main_header .loggedin {
+    position: relative;
+    font-size: 13px;
+    padding: 15px 15px 15px 20px !important;
+    cursor: pointer;
+    background: #fff !important;
+    color: var(--text-color) !important;
+    border: 1px solid #eee;
+}
+.main_header .loggedin::after {
+    content: '\f107';
+    font-family: 'Font Awesome 6 pro';
+    font-weight: 300;
+    transition: var(--transition);
+    position: absolute;
+    display: block;
+    left: 7px;
+    top: 22px;
+    color: var(--text-color);
+}

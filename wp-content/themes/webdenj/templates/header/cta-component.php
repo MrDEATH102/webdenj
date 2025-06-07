@@ -29,12 +29,27 @@
                     d="M3.64587 10.4167L5.11462 19.4167C5.44796 21.4375 6.25004 22.9167 9.22921 22.9167H15.5105C18.75 22.9167 19.2292 21.5 19.6042 19.5417L21.3542 10.4167"
                     stroke="#7454fc" stroke-width="1.5" stroke-linecap="round"></path>
             </svg>
+            <span class="cart_count"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
         </a>
     </div>
     <div class="cta__header__left">
-        <a href="<?php bloginfo('url') ?>/my-account" class="cta__header__left--login">
-            <i class="fa-light fa-user-unlock"></i>
-            پنل کاربری
-        </a>
+        <?php
+        if (is_user_logged_in()): ?>
+            <a class="cta__header__left--login loggedin">
+                <?php
+                $user = wp_get_current_user();
+                $user_id = $user->ID;
+                $dispay_name = $user->display_name;
+                ?>
+                <?php
+                echo $dispay_name;
+                ?>
+            </a>
+        <?php else: ?>
+            <a href="<?php bloginfo('url') ?>/my-account" class="cta__header__left--login">
+                <i class="fa-light fa-user-unlock"></i>
+                پنل کاربری
+            </a>
+        <?php endif; ?>
     </div>
 </div>
