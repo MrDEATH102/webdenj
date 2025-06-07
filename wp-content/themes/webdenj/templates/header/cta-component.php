@@ -40,11 +40,11 @@
                 $user = wp_get_current_user();
                 $user_id = $user->ID;
                 $dispay_name = $user->display_name;
+                $avatar = get_avatar_url($user_id, array('size' => '48'));
                 ?>
-                <?php
-                echo $dispay_name;
-                ?>
+                <img src="<?php echo $avatar; ?>" alt="<?php echo $display_name; ?>">
             </a>
+            <?php echo get_template_part('widgets/minipanel', 'widget'); ?>
         <?php else: ?>
             <a href="<?php bloginfo('url') ?>/my-account" class="cta__header__left--login">
                 <i class="fa-light fa-user-unlock"></i>
