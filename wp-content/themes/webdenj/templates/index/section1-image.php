@@ -1,0 +1,1 @@
+<img src="<?php echo get_template_directory_uri().'/assets/images/s1-image.png';?>" alt="<?php bloginfo('name');?>" class="img-fluid">
